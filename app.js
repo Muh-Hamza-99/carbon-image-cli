@@ -35,6 +35,18 @@ const getUserInput = async () => {
             default: "133%",
         },
         {
+            type: "confirm",
+            name: "includeLineNumbers",
+            message: "Include Line Numbers?",
+            default: false,
+        },
+        {
+            type: "confirm",
+            name: "includeWindowControls",
+            message: "Include Window Controls?",
+            default: true,
+        },
+        {
             type: "list",
             name: "exportAsFiletype",
             message: "Export As",
