@@ -1,0 +1,11 @@
+{
+  "name": "carbon-image-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Muhammad Hamza",
+  "license": "MIT",
+  "homepage": "https://github.com/Muh-Hamza-99/carbon-image-cli#readme"
+}
