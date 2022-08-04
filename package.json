@@ -7,5 +7,8 @@
   "keywords": [],
   "author": "Muhammad Hamza",
   "license": "MIT",
-  "homepage": "https://github.com/Muh-Hamza-99/carbon-image-cli#readme"
+  "homepage": "https://github.com/Muh-Hamza-99/carbon-image-cli#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }

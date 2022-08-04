@@ -1,0 +1,40 @@
+const inquirer = require("inquirer");
+
+const getUserInput = async () => {
+    const inputs = await inquirer.prompt([
+        {
+            type: "input",
+            name: "syntaxTheme",
+            message: "Syntax Theme",
+            default: "Duotone",
+        },
+        {
+            type: "input",
+            name: "fontFamily",
+            message: "Font Family",
+            default: "Fantasque Sans Mono",
+        },
+        {
+            type: "input",
+            name: "fontSize",
+            message: "Font Size",
+            default: "18px",
+        },
+        {
+            type: "input",
+            name: "lineHeight",
+            message: "Line Height",
+            default: "133%",
+        },
+        {
+            type: "list",
+            name: "exportAsFiletype",
+            message: "Export As",
+            choices: ["svg", "png"],
+            default: "png",
+        },
+    ]);
+    console.log(inputs);
+};
+
+getUserInput();
