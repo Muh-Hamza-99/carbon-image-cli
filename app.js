@@ -18,12 +18,20 @@ const getUserInput = async () => {
             type: "input",
             name: "fontSize",
             message: "Font Size",
+            validate: async input => {
+                if (!input.endsWith("px")) return "Value must end with 'px'";
+                return true;
+            },
             default: "18px",
         },
         {
             type: "input",
             name: "lineHeight",
             message: "Line Height",
+            validate: async input => {
+                if (!input.endsWith("%")) return "Value must end with '%'";
+                return true;
+            },
             default: "133%",
         },
         {
