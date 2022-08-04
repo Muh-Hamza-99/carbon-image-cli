@@ -1,11 +1,14 @@
 const inquirer = require("inquirer");
 
+const THEMES = require("./lib/themes");
+
 const getUserInput = async () => {
     const inputs = await inquirer.prompt([
         {
-            type: "input",
+            type: "list",
             name: "syntaxTheme",
             message: "Syntax Theme",
+            choices: Object.entries(THEMES).map(theme => theme[0]),
             default: "Duotone",
         },
         {
