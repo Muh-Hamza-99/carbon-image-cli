@@ -13,6 +13,16 @@ const getUserInput = async () => {
         },
         {
             type: "input",
+            name: "backgroundColor",
+            message: "Background Color",
+            validate: async input => {
+                if (!/^#(?:[0-9a-fA-F]{3}){1,2}$/.test(input)) return "Color must be a valid hexadecimal code.";
+                return true;
+            },
+            default: "#333333",
+        },
+        {
+            type: "input",
             name: "fontFamily",
             message: "Font Family",
             default: "Fantasque Sans Mono",
