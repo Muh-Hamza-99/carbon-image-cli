@@ -2,6 +2,8 @@ const inquirer = require("inquirer");
 
 const chalk = require("chalk");
 
+const fileExists = require("./utilities/file-exists");
+
 const THEMES = require("./lib/themes");
 
 const getUserInput = async () => {
@@ -75,6 +77,11 @@ const getUserInput = async () => {
 const file = process.argv[2];
 if (!file) {
     console.log(chalk.red("No file specified!"));
+    process.exit(1);
+};
+
+if (!fileExists(file)) {
+    console.log(chalk.red(`File ${file} does not exist.`));
     process.exit(1);
 };
 
