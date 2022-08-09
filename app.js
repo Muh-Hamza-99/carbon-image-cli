@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
 
+const chalk = require("chalk");
+
 const THEMES = require("./lib/themes");
 
 const getUserInput = async () => {
@@ -68,6 +70,12 @@ const getUserInput = async () => {
         },
     ]);
     console.log(inputs);
+};
+
+const file = process.argv[2];
+if (!file) {
+    console.log(chalk.red("No file specified!"));
+    process.exit(1);
 };
 
 getUserInput();
