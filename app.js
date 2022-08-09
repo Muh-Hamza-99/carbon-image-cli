@@ -64,6 +64,14 @@ const getUserInput = async () => {
             default: true,
         },
         {
+            type: "list",
+            name: "wt",
+            message: "Window Theme?",
+            choices: ["none", "sharp", "boxy", "bw"],
+            default: "none",
+            when: answers => answers.wc
+        },
+        {
             type: "confirm",
             name: "ds",
             message: "Include Drop Shadow?",
