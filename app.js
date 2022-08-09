@@ -5,6 +5,7 @@ const chalk = require("chalk");
 const fileExists = require("./utilities/file-exists");
 
 const THEMES = require("./lib/themes");
+const FONTS = require("./lib/fonts");
 
 const getUserInput = async () => {
     const inputs = await inquirer.prompt([
@@ -26,8 +27,9 @@ const getUserInput = async () => {
             default: "#333333",
         },
         {
-            type: "input",
+            type: "list",
             name: "fm",
+            choices: Object.entries(FONTS).map(theme => theme[0]),
             message: "Font Family",
             default: "Fantasque Sans Mono",
         },
