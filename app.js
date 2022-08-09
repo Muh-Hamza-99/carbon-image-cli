@@ -10,14 +10,14 @@ const getUserInput = async () => {
     const inputs = await inquirer.prompt([
         {
             type: "list",
-            name: "syntaxTheme",
+            name: "t",
             message: "Syntax Theme",
             choices: Object.entries(THEMES).map(theme => theme[0]),
             default: "Duotone",
         },
         {
             type: "input",
-            name: "backgroundColor",
+            name: "bg",
             message: "Background Color",
             validate: async input => {
                 if (!/^#(?:[0-9a-fA-F]{3}){1,2}$/.test(input)) return "Color must be a valid hexadecimal code.";
@@ -27,13 +27,13 @@ const getUserInput = async () => {
         },
         {
             type: "input",
-            name: "fontFamily",
+            name: "fm",
             message: "Font Family",
             default: "Fantasque Sans Mono",
         },
         {
             type: "input",
-            name: "fontSize",
+            name: "fs",
             message: "Font Size",
             validate: async input => {
                 if (!input.endsWith("px")) return "Value must end with 'px'";
@@ -43,7 +43,7 @@ const getUserInput = async () => {
         },
         {
             type: "input",
-            name: "lineHeight",
+            name: "lh",
             message: "Line Height",
             validate: async input => {
                 if (!input.endsWith("%")) return "Value must end with '%'";
@@ -53,13 +53,13 @@ const getUserInput = async () => {
         },
         {
             type: "confirm",
-            name: "includeLineNumbers",
+            name: "ln",
             message: "Include Line Numbers?",
             default: false,
         },
         {
             type: "confirm",
-            name: "includeWindowControls",
+            name: "wc",
             message: "Include Window Controls?",
             default: true,
         },
