@@ -64,6 +64,34 @@ const getUserInput = async () => {
             default: true,
         },
         {
+            type: "confirm",
+            name: "ds",
+            message: "Include Drop Shadow?",
+            default: false
+        },
+        {
+            type: "input",
+            name: "dsyoff",
+            message: "Drop Shadow Y-Offset?",
+            validate: async input => {
+                if (!input.endsWith("px")) return "Value must end with 'px'";
+                return true;
+            },
+            default: "20px",
+            when: answers => answers.ds
+        },
+        {
+            type: "input",
+            name: "dsblur",
+            message: "Drop Shadow Blur",
+            validate: async input => {
+                if (!input.endsWith("px")) return "Value must end with 'px'";
+                return true;
+            },
+            default: "68px",
+            when: answers => answers.ds
+        },
+        {
             type: "list",
             name: "exportAsFiletype",
             message: "Export As",
