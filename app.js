@@ -54,6 +54,26 @@ const getUserInput = async () => {
             default: "133%",
         },
         {
+            type: "input",
+            name: "pv",
+            message: "Vertical Padding?",
+            validate: async input => {
+                if (!input.endsWith("px")) return "Value must end with 'px'";
+                return true;
+            },
+            default: "50px"
+        },
+        {
+            type: "input",
+            name: "ph",
+            message: "Horizontal Padding?",
+            validate: async input => {
+                if (!input.endsWith("px")) return "Value must end with 'px'";
+                return true;
+            },
+            default: "60px"
+        },
+        {
             type: "confirm",
             name: "ln",
             message: "Include Line Numbers?",
