@@ -28,7 +28,6 @@ const main = async () => {
     const language = getLanguage(extension);
     const URL = constructURL({ ...inputs, bg: hexToRGBA(inputs.bg), l: language, code });
     await headlessVisit(URL, inputs.exportAsFiletype);
-    console.log(URL);
 };
 
 main();

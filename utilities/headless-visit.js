@@ -14,15 +14,15 @@ const headlessVisit = async (url, filetype) => {
 		case "png": {
 			await PNGExportTrigger.click();
 			break;
-		}
+		};
 		case "svg": {
 			await SVGExportTrigger.click();
 			break;
-		}
+		};
 		default: {
 			throw new Error("Only png and svg are supported.");
-		}
-    }
+		};
+    };
 	await page.waitFor(2000);
 	await browser.close();
 };
