@@ -2,6 +2,7 @@ const chalk = require("chalk");
 
 const getUserInput = require("./utilities/get-user-input");
 const constructURL = require("./utilities/construct-url");
+const readFile = require("./utilities/read-file");
 
 const fileExists = require("./utilities/file-exists");
 
@@ -18,6 +19,8 @@ if (!fileExists(file)) {
 
 const main = async () => {
     const inputs = await getUserInput();
+    const code = await readFile(file);
+    console.log(code);
     const URL = constructURL(inputs);
     console.log(URL);
 };
