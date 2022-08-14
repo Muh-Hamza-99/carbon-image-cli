@@ -1,10 +1,10 @@
 const chalk = require("chalk");
+const hexToRGBA = require("hex-to-rgba");
 
 const getUserInput = require("./utilities/get-user-input");
 const constructURL = require("./utilities/construct-url");
 const getLanguage = require("./utilities/get-language");
 const readFile = require("./utilities/read-file");
-const hexToRGBA = require("./utilities/hex-to-rgba");
 
 const fileExists = require("./utilities/file-exists");
 

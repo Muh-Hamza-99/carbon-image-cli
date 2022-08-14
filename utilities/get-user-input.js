@@ -17,7 +17,7 @@ const getUserInput = async () => {
             name: "bg",
             message: "Background Color",
             validate: async input => {
-                if (!/^#(?:[0-9a-fA-F]{3}){1,2}$/.test(input)) return "Color must be a valid hexadecimal code.";
+                if (!/^#(?:[0-9a-fA-F]{3,4}){1,2}$/.test(input)) return "Color must be a valid hexadecimal code.";
                 return true;
             },
             default: "#333333",
