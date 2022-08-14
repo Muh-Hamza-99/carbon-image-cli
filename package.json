@@ -10,6 +10,7 @@
   "homepage": "https://github.com/Muh-Hamza-99/carbon-image-cli#readme",
   "dependencies": {
     "hex-to-rgba": "^2.0.1",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "puppeteer": "^16.1.0"
   }
 }
