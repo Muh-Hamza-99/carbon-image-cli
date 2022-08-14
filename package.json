@@ -1,8 +1,10 @@
 {
-  "name": "carbon-image-cli",
+  "name": "carmage",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "preferGlobal": true,
+  "bin": "./app.js",
   "scripts": {},
   "keywords": [],
   "author": "Muhammad Hamza",
