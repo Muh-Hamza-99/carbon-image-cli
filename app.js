@@ -5,6 +5,7 @@ const getUserInput = require("./utilities/get-user-input");
 const constructURL = require("./utilities/construct-url");
 const getLanguage = require("./utilities/get-language");
 const readFile = require("./utilities/read-file");
+const headlessVisit = require("./utilities/headless-visit");
 
 const fileExists = require("./utilities/file-exists");
 
@@ -26,6 +27,7 @@ const main = async () => {
     const code = await readFile(file);
     const language = getLanguage(extension);
     const URL = constructURL({ ...inputs, bg: hexToRGBA(inputs.bg), l: language, code });
+    await headlessVisit(URL, inputs.exportAsFiletype);
     console.log(URL);
 };
 
