@@ -5,7 +5,7 @@ const headlessVisit = async (url, filetype) => {
 	const page = await browser.newPage();
 	await page.setViewport({ width: 1600, height: 1000, deviceScaleFactor: 2 });
 	await page.goto(url, { waitUntil: "load" });
-	await page._client.send("Page.setDownloadBehavior", { behavior: "allow", downloadPath: `${process.cwd()}/imgs` });
+	await page._client.send("Page.setDownloadBehavior", { behavior: "allow", downloadPath: process.cwd() });
 	const saveImageTrigger = await page.waitForSelector("#export-menu");
 	await saveImageTrigger.click();
 	const PNGExportTrigger = await page.$("#export-png");
