@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 
 const headlessVisit = async (url, filetype) => {
-	const browser = await puppeteer.launch({ headless: false });
+	const browser = await puppeteer.launch({ headless: true });
 	const page = await browser.newPage();
 	await page.setViewport({ width: 1600, height: 1000, deviceScaleFactor: 2 });
 	await page.goto(url, { waitUntil: "load" });
